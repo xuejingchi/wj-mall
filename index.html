@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="must-revalidate">
+    <meta http-equiv="refresh" content="28800">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0">-->
+    <title>万郡商城</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+  </head>
+  <script>
+    document.getElementById('baidu_tj') && document.getElementById('baidu_tj').remove()
+    const hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?0ee719013635f1f882ccf74c9dd06893'
+    hm.id = 'baidu_tj'
+    const s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+    window.onload = function () {
+      // window.history.pushState(null, null, document.URL);
+      window.addEventListener('popstate', function () {
+        // window.history.forward(1)
+        window.history.pushState(null, null, document.URL);
+      })
+    }
+  </script>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+
+</html>
